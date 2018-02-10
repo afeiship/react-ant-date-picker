@@ -11,8 +11,9 @@ var cssSourceMapProd = (env === 'production' && config.build.productionSourceMap
 var useCssSourceMap = cssSourceMapDev || cssSourceMapProd;
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var externals = process.env.NODE_ENV === 'production' ? {
-  react: 'react',
-  classnames: 'classnames',
+  'react': 'react',
+  'classnames': 'classnames',
+  'antd': 'antd',
   'react-dom': 'react-dom',
   'noop':'noop',
   'object-assign':'object-assign',
