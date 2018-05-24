@@ -25,7 +25,7 @@ class App extends React.Component{
   render(){
     return (
       <div className="hello-react-ant-date-picker">
-        <ReactAntDatePicker onChange={this._onChange} ref='rc' />
+        <ReactAntDatePicker showTime onChange={this._onChange} ref='rc' />
     </div>
     );
   }

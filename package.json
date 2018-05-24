@@ -82,11 +82,12 @@
     "npm": ">= 3.0.0"
   },
   "dependencies": {
+    "antd": "^3.5.3",
     "classnames": "^2.2.5",
-    "object-assign": "^4.1.1",
     "noop": "github:afeiship/noop",
+    "object-assign": "^4.1.1",
+    "prop-types": "^15.5.10",
     "react": "^15.4.1",
-    "react-dom": "^15.4.1",
-    "prop-types": "^15.5.10"
+    "react-dom": "^15.4.1"
   }
 }

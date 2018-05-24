@@ -16,18 +16,22 @@ export default class extends Component{
 
   static defaultProps = {
     onChange: noop,
-    format:'YYYY-MM-DD'
+    format: 'YYYY-MM-DD HH:mm:ss'
   };
   /*===properties end===*/
 
   _onChange = inMoment =>{
     const { format, onChange } = this.props;
-    const target = inMoment ? inMoment.format(format): inMoment;
-    onChange( target );
+    const value = inMoment ? inMoment.format(format): inMoment;
+    onChange({
+      target:{
+        value
+      }
+    });
   };
 
   render(){
-    const {className, format, onChange,...props} = this.props;
+    const {className, onChange,...props} = this.props;
     return (
       <DatePicker {...props} onChange={this._onChange} className={classNames('react-ant-date-picker',className)} />
     );
