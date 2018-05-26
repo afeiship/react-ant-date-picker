@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import noop from 'noop';
 import objectAssign from 'object-assign';
 import { DatePicker } from 'antd';
+import moment from 'moment';
 
 export default class extends Component{
   /*===properties start===*/
@@ -21,19 +22,22 @@ export default class extends Component{
   /*===properties end===*/
 
   _onChange = inMoment =>{
-    const { format, onChange } = this.props;
-    const value = inMoment ? inMoment.format(format): inMoment;
+    const { onChange } = this.props;
     onChange({
       target:{
-        value
+        value: inMoment || moment()
       }
     });
   };
 
   render(){
-    const {className, onChange,...props} = this.props;
+    const {className, onChange, value ,...props} = this.props;
     return (
-      <DatePicker {...props} onChange={this._onChange} className={classNames('react-ant-date-picker',className)} />
+      <DatePicker
+        onChange={this._onChange}
+        className={classNames('react-ant-date-picker', className)}
+        {...props}
+      />
     );
   }
 }

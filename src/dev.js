@@ -20,12 +20,16 @@ class App extends React.Component{
 
   _onChange = e =>{
     console.log(e);
+    // this.setState({ value: e})
   };
 
   render(){
     return (
       <div className="hello-react-ant-date-picker">
-        <ReactAntDatePicker showTime onChange={this._onChange} ref='rc' />
+        <ReactAntDatePicker
+          value={this.state.value}
+          style={{ width: 200 }}
+          onChange={this._onChange} ref='rc' />
     </div>
     );
   }
