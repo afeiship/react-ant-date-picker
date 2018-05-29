@@ -22,7 +22,7 @@ export default class extends Component{
   };
   /*===properties end===*/
 
-  _onChange = inMoment =>{
+  _onChange = inEvent =>{
     const { onChange } = this.props;
     onChange(nx.returnEventTarget(inEvent));
   };
