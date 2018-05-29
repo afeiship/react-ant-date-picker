@@ -6,6 +6,7 @@ import noop from 'noop';
 import objectAssign from 'object-assign';
 import { DatePicker } from 'antd';
 import moment from 'moment';
+import 'next-return-event';
 
 export default class extends Component{
   /*===properties start===*/
@@ -23,19 +24,14 @@ export default class extends Component{
 
   _onChange = inMoment =>{
     const { onChange } = this.props;
-    onChange({
-      target:{
-        value: inMoment
-      }
-    });
+    onChange(nx.returnEventTarget(inEvent));
   };
 
   render(){
-    const { className, onChange, value, ...props } = this.props;
+    const { className, onChange, ...props } = this.props;
     return (
       <DatePicker
         onChange={this._onChange}
-        defaultValue={moment(value)}
         className={classNames('react-ant-date-picker', className)}
         {...props}
       />

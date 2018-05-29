@@ -16,6 +16,7 @@ var externals = process.env.NODE_ENV === 'production' ? {
   'antd': 'antd',
   'react-dom': 'react-dom',
   'noop':'noop',
+  'next-return-event':'next-return-event',
   'moment':'moment',
   'object-assign':'object-assign',
   'prop-types':'prop-types',
