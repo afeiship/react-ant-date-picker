@@ -31,10 +31,11 @@ export default class extends Component{
   };
 
   render(){
-    const {className, onChange, value ,...props} = this.props;
+    const { className, onChange, value, ...props } = this.props;
     return (
       <DatePicker
         onChange={this._onChange}
+        defaultValue={moment(value)}
         className={classNames('react-ant-date-picker', className)}
         {...props}
       />

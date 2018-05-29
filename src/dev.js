@@ -8,7 +8,7 @@ import ReactAntDatePicker from './main';
 
 class App extends React.Component{
   state = {
-
+    value:'2018-05-29 11:34:28'
   };
 
   constructor(props){
