@@ -25,7 +25,7 @@ export default class extends Component{
     const { onChange } = this.props;
     onChange({
       target:{
-        value: inMoment || moment()
+        value: inMoment
       }
     });
   };
