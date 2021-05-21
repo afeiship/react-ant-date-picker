@@ -1,15 +1,14 @@
 {
-  "presets": [
-    "es2015",
-    "react",
-    "stage-0"
-  ],
+  "presets": [[
+      "@babel/preset-env",
+      {
+        "targets": { "browsers": [ "last 2 versions" ] }
+      }
+    ], "@babel/react"],
   "plugins": [
-    "transform-decorators-legacy",
-    "transform-class-properties",
-    "transform-es2015-spread",
-    "transform-object-rest-spread"
-  ],
-  "ignore": [
+    [ "@babel/plugin-proposal-decorators", { "legacy": true } ],
+    [ "@babel/plugin-proposal-class-properties", { "loose": false } ],
+    "@babel/plugin-proposal-optional-chaining",
+    "@babel/plugin-transform-parameters"
   ]
 }

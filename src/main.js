@@ -1,2 +1,2 @@
-import ReactAntDatePicker from 'components/react-ant-date-picker';
+import ReactAntDatePicker from './components';
 export default ReactAntDatePicker;
