@@ -20,17 +20,11 @@
     "url": "git+https://github.com/afeiship/react-ant-date-picker.git"
   },
   "keywords": [
-    "boilerplate",
     "react",
-    "component",
-    "cra",
-    "template",
-    "webpack",
-    "sass",
-    "scss",
-    "docs",
-    "service-worker",
-    "sw"
+    "ant",
+    "antd",
+    "date",
+    "picker"
   ],
   "author": "afei",
   "license": "MIT",
