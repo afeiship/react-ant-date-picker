@@ -49,11 +49,10 @@ export default class ReactAntDatePicker extends Component {
     return true;
   }
 
-  handleChange = (inEvent) => {
+  handleChange = (inEvent, inDateString) => {
     const { format, onChange } = this.props;
-    const value = inEvent.format(format);
     this.setState({ value: inEvent }, () => {
-      onChange({ target: { value } });
+      onChange({ target: { value: inDateString } });
     });
   };
 
